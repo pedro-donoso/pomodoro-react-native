@@ -15,7 +15,12 @@ export default function App() {
   <View style={styles.container}>
    <View style={styles.main}>
     <Text style={styles.text}>Pomodoro</Text>
-    <Header time={time} />
+    <Text style={styles.text}>{time}</Text>
+    <Header
+     currentTime={currentTime}
+     setCurrentTime={setCurrentTime}
+     setTime={setTime}
+    />
    </View>
   </View>
  );
