@@ -1,7 +1,15 @@
-import { View } from "react-native"
+import { View, Text, StyleSheet } from "react-native"
 
-export default function Timer() {
+export default function Timer({time}) {
   return (
-    <View></View>
+    <View style={styles.container}>
+        <Text>{time}</Text>
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#F2F2F2"
+  }
+})

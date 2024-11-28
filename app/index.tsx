@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import { useState } from "react";
 import Header from "../components/Header";
+import Timer from "../components/Timer"
 
 const colors = ["#f7dc6f", "#a2d9ce", "#d7bde2"];
 const options = ["Pomodoro", "Short Break", "Long Break"];
@@ -26,6 +27,7 @@ export default function App() {
      setCurrentTime={setCurrentTime}
      setTime={setTime}
     />
+    <Timer time={time} />
    </View>
   </View>
  );
