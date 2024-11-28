@@ -12,7 +12,7 @@ export default function App() {
   
   
  return (
-  <View style={styles.container}>
+  <View style={[styles.container, {backgroundColor: colors[currentTime]}]}>
    <View style={styles.main}>
     <Text style={styles.text}>Pomodoro</Text>
     <Text style={styles.text}>{time}</Text>
