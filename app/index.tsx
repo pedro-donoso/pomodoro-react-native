@@ -1,5 +1,6 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import { useState } from "react";
+import Header from "../components/Header";
 
 const colors = ["#f7dc6f", "#a2d9ce", "#d7bde2"];
 
@@ -14,7 +15,7 @@ export default function App() {
   <View style={styles.container}>
    <View style={styles.main}>
     <Text style={styles.text}>Pomodoro</Text>
-    <Text style={styles.subtitle}>{time}</Text>
+    <Header time={time} />
    </View>
   </View>
  );
