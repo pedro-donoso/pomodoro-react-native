@@ -10,6 +10,8 @@ export default function Timer({time}) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F2F2F2"
+    backgroundColor: "#F2F2F2",
+    padding: 15,
+    borderRadius: 15
   }
 })
