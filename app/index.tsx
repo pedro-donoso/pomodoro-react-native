@@ -5,7 +5,7 @@ export default function Page() {
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Hola mundo</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <Text style={styles.subtitle}>Bienvenidos</Text>
       </View>
     </View>
   );
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
-    fontSize: 64,
+    fontSize: 32,
     fontWeight: "bold",
   },
   subtitle: {
-    fontSize: 36,
+    fontSize: 24,
     color: "#38434D",
   },
 });
