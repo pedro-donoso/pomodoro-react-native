@@ -6,4 +6,10 @@
 npx create-expo-app nombreapp
 ```
 
+### Inicio proyecto:
+
+```
+npm start
+```
+
 
