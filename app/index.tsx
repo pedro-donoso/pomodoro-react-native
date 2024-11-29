@@ -18,6 +18,10 @@ export default function App() {
   return `${minutes < 10 ? "0" : ""}${minutes}:${secs < 10 ? "0" : ""}${secs}`;
  };
 
+ function handleStartStop() {
+  setIsActive(!isActive);
+ }
+
  return (
   <View style={[styles.container, { backgroundColor: colors[currentTime] }]}>
    <View style={styles.main}>
@@ -29,7 +33,7 @@ export default function App() {
      setTime={setTime}
     />
     <Timer time={time} />
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity onPress={handleStartStop} style={styles.button}>
       <Text style={styles.state}>{isActive ? "STOP" : "START"}</Text>
     </TouchableOpacity>
    </View>
