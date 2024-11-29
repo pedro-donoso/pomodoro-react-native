@@ -37,20 +37,20 @@ const styles = StyleSheet.create({
  container: {
   flex: 1,
   alignItems: "center",
-  padding: 24,
+  paddingHorizontal: 15
  },
  main: {
   flex: 1,
   justifyContent: "center",
   maxWidth: 960,
-  marginHorizontal: "auto",
+  marginHorizontal: "auto"
  },
  text: {
   fontSize: 32,
-  fontWeight: "bold",
+  fontWeight: "bold"
  },
  subtitle: {
   fontSize: 24,
-  color: "#38434D",
+  color: "#38434D"
  },
 });
