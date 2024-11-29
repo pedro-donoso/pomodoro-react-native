@@ -1,5 +1,5 @@
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Timer from "../components/Timer";
 import { Audio } from "expo-av";
@@ -18,6 +18,20 @@ export default function App() {
   const secs = seconds % 60;
   return `${minutes < 10 ? "0" : ""}${minutes}:${secs < 10 ? "0" : ""}${secs}`;
  };
+
+ useEffect(() => {
+  let interval = null;
+
+  if (isActive) {
+    interval = setInterval(() => {
+      setTime(time - 1);
+    }, 1000);
+  } else {
+    clearInterval(interval);
+  }
+
+  return () => clearInterval(interval)
+ }, [isActive, time])
 
  function handleStartStop() {
   playSound();
