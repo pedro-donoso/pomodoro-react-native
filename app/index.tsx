@@ -1,7 +1,8 @@
 import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import Header from "../components/Header";
-import Timer from "../components/Timer"
+import Timer from "../components/Timer";
+import { Audio } from "expo-av";
 
 const colors = ["#f7dc6f", "#a2d9ce", "#d7bde2"];
 const options = ["Pomodoro", "Short Break", "Long Break"];
@@ -19,7 +20,15 @@ export default function App() {
  };
 
  function handleStartStop() {
+  playSound();
   setIsActive(!isActive);
+ }
+ 
+ async function playSound() {
+  const { sound } = await Audio.Sound.createAsync(
+    require("../assets/bambu_1.mp3")
+  )
+  await sound.playAsync();
  }
 
  return (
