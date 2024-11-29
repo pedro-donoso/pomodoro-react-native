@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import Header from "../components/Header";
 import Timer from "../components/Timer"
@@ -10,6 +10,7 @@ export default function App() {
  const [isWorking, setIsWorking] = useState(false);
  const [time, setTime] = useState(25 * 60);
  const [currentTime, setCurrentTime] = useState(0);
+ const [isActive, setIsActive] = useState(false);
 
  const formatTime = (seconds: number) => {
   const minutes = Math.floor(seconds / 60);
@@ -28,6 +29,9 @@ export default function App() {
      setTime={setTime}
     />
     <Timer time={time} />
+    <TouchableOpacity style={styles.button}>
+      <Text style={styles.state}>{isActive ? "STOP" : "START"}</Text>
+    </TouchableOpacity>
    </View>
   </View>
  );
@@ -53,4 +57,15 @@ const styles = StyleSheet.create({
   fontSize: 24,
   color: "#38434D"
  },
+ state: {
+  color: "white",
+  fontWeight: "bold"
+ },
+ button: {
+  alignItems: "center",
+  backgroundColor: "#333333",
+  padding: 15,
+  marginTop: 15,
+  borderRadius: 15
+ }
 });
